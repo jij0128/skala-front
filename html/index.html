@@ -26,27 +26,45 @@
       </ul>
     </nav>
 
-    <main>
-      <h2>오늘의 주요 소식</h2>
-      <h3>최근 공지 및 업데이트</h3>
-      <p>[업데이트] 여행 앨범에 졸업 여행 브이로그 업데이트 완료!</p>
-      <p>미국 서부 졸업 여행에서 찍은 사진 4장과, 이정후 선수의 그라운드 홈런 직캠 영상을 여행 앨범에 추가했습니다.</p>
+    <div class="content-layout">
+      <main>
+        <h2>오늘의 주요 소식</h2>
+        <h3>최근 공지 및 업데이트</h3>
+        <p>[업데이트] 여행 앨범에 졸업 여행 브이로그 업데이트 완료!</p>
+        <p>미국 서부 졸업 여행에서 찍은 사진 4장과, 이정후 선수의 그라운드 홈런 직캠 영상을 여행 앨범에 추가했습니다.</p>
 
-      <h3>올해의 베스트 컷</h3>
-      <img src="../media/그랜드 캐니언.jpeg" alt="그랜드 캐니언" width="400">
-      <p>졸업 여행 중 방문한 그랜드 캐니언의 일출</p>
-    </main>
+        <h3>올해의 베스트 컷</h3>
+        <img src="../media/그랜드 캐니언.jpeg" alt="그랜드 캐니언" width="400">
+        <p>졸업 여행 중 방문한 그랜드 캐니언의 일출</p>
+      </main>
 
-    <aside>
-      <h2>실시간 정보</h2>
-      <p>위치: 광주광역시 광산구</p>
-      <p>추천 학습 사이트: <a href="https://skala2.udemy.com/organization/home/" target="_blank">Udemy</a></p>
-      <p>이메일 문의: daniel2010298@gmail.com</p>
-    </aside>
+      <aside>
+        <h2>실시간 정보</h2>
+        <p>위치: 광주광역시 광산구</p>
+        <p>추천 학습 사이트: <a href="https://skala2.udemy.com/organization/home/" target="_blank">Udemy</a></p>
+        <p>이메일 문의: daniel2010298@gmail.com</p>
+
+        <section>
+          <h2>미니 게임</h2>
+          <button onclick="startUpDownGame()">숫자 맞추기 게임</button>
+        </section>
+
+        <section>
+          <button onclick="calculateGrade()">성적 계산하기</button>
+        </section>
+
+        <section>
+          <button onclick="showMyBag()">내 가방 보기</button>
+        </section>
+      </aside>
+    </div>
 
     <footer>
       <p>&copy; 2026 나의 포트폴리오. 모든 태그는 웹 표준 시맨틱 태그로 작성되었습니다.</p>
     </footer>
   </div>
+  <script src="../script/upDown.js"></script>
+  <script src="../script/grade.js"></script>
+  <script src="../script/bag.js"></script>
 </body>
 </html>
