@@ -19,60 +19,98 @@
       <fieldset>
         <legend>계정 정보</legend>
 
-        <label for="userId">아이디:</label>
-        <input type="text" id="userId" name="userId" placeholder="4~15자 영문/숫자" required>
-        <br>
+        <div class="form-row">
+          <label for="userId">아이디</label>
+          <input type="text" id="userId" name="userId" placeholder="4~15자 영문/숫자" required>
+        </div>
 
-        <label for="userPw">비밀번호:</label>
-        <input type="password" id="userPw" name="userPw" placeholder="8자 이상 입력" required>
-        <br>
+        <div class="form-row">
+          <label for="userPw">비밀번호</label>
+          <div class="password-wrapper">
+            <input type="password" id="userPw" name="userPw" placeholder="8자 이상 입력" required>
+            <button type="button" class="password-toggle" id="togglePw" aria-label="비밀번호 표시"></button>
+          </div>
+        </div>
 
-        <label for="userEmail">이메일:</label>
-        <input type="text" id="userEmail" name="userEmail" placeholder="example">
-        @
-        <select name="emailDomain">
-          <option value="">직접입력</option>
-          <option value="gmail.com">gmail.com</option>
-          <option value="naver.com">naver.com</option>
-          <option value="daum.net">daum.net</option>
-        </select>
+        <div class="form-row">
+          <label for="userPwConfirm">비밀번호 확인</label>
+          <div class="password-wrapper">
+            <input type="password" id="userPwConfirm" name="userPwConfirm" placeholder="비밀번호를 다시 입력하세요" required>
+            <button type="button" class="password-toggle" id="togglePwConfirm" aria-label="비밀번호 표시"></button>
+          </div>
+        </div>
+        <p id="pwMatchMsg" class="form-hint"></p>
+
+        <div class="form-row">
+          <label for="userEmail">이메일</label>
+          <div class="email-group">
+            <input type="text" id="userEmail" name="userEmail" placeholder="example">
+            <span>@</span>
+            <input type="text" id="emailDomainCustom" name="emailDomainCustom" placeholder="도메인 입력">
+            <select id="emailDomainSelect" name="emailDomainSelect">
+              <option value="">직접입력</option>
+              <option value="gmail.com">gmail.com</option>
+              <option value="naver.com">naver.com</option>
+              <option value="daum.net">daum.net</option>
+            </select>
+          </div>
+        </div>
       </fieldset>
 
       <fieldset>
         <legend>개인 프로필 정보</legend>
 
-        <label for="name">이름:</label>
-        <input type="text" id="name" name="name" required>
-        <br>
+        <div class="form-row">
+          <label for="name">이름</label>
+          <input type="text" id="name" name="name" required>
+        </div>
 
-        <label for="birth">생년월일:</label>
-        <input type="date" id="birth" name="birth">
-        <br>
+        <div class="form-row">
+          <label for="birth">생년월일</label>
+          <input type="date" id="birth" name="birth">
+        </div>
 
-        <label>성별:</label>
-        <input type="radio" id="male" name="gender" value="male" checked>
-        <label for="male">남성</label>
-        <input type="radio" id="female" name="gender" value="female">
-        <label for="female">여성</label>
-        <br>
+        <div class="form-row">
+          <label>성별</label>
+          <span class="inline-options">
+            <input type="radio" id="male" name="gender" value="male" checked>
+            <label for="male">남성</label>
+            <input type="radio" id="female" name="gender" value="female">
+            <label for="female">여성</label>
+          </span>
+        </div>
 
-        <label>관심 분야 (중복 선택 가능):</label><br>
-        <input type="checkbox" id="interest1" name="interest" value="web">
-        <label for="interest1">웹 프론트엔드 (Vue.js/HTML)</label><br>
-        <input type="checkbox" id="interest2" name="interest" value="uiux">
-        <label for="interest2">UI/UX 디자인 표준</label><br>
-        <input type="checkbox" id="interest3" name="interest" value="backend">
-        <label for="interest3">백엔드 &amp; 데이터베이스</label><br>
-        <input type="checkbox" id="interest4" name="interest" value="cloud">
-        <label for="interest4">클라우드 &amp; 인프라</label><br>
+        <div class="form-row form-row-top">
+          <label>관심 분야</label>
+          <span class="inline-options stacked">
+            <span class="checkbox-item">
+              <input type="checkbox" id="interest1" name="interest" value="web">
+              <label for="interest1">웹 프론트엔드 (Vue.js/HTML)</label>
+            </span>
+            <span class="checkbox-item">
+              <input type="checkbox" id="interest2" name="interest" value="uiux">
+              <label for="interest2">UI/UX 디자인 표준</label>
+            </span>
+            <span class="checkbox-item">
+              <input type="checkbox" id="interest3" name="interest" value="backend">
+              <label for="interest3">백엔드 &amp; 데이터베이스</label>
+            </span>
+            <span class="checkbox-item">
+              <input type="checkbox" id="interest4" name="interest" value="cloud">
+              <label for="interest4">클라우드 &amp; 인프라</label>
+            </span>
+          </span>
+        </div>
 
-        <label for="route">가입 경로:</label>
-        <select id="route" name="route">
-          <option value="">선택</option>
-          <option value="search">검색</option>
-          <option value="sns">SNS</option>
-          <option value="friend">지인 추천</option>
-        </select>
+        <div class="form-row">
+          <label for="route">가입 경로</label>
+          <select id="route" name="route">
+            <option value="">선택</option>
+            <option value="search">검색</option>
+            <option value="sns">SNS</option>
+            <option value="friend">지인 추천</option>
+          </select>
+        </div>
       </fieldset>
 
       <fieldset>
@@ -81,10 +119,11 @@
         <textarea id="intro" name="intro" rows="4" cols="50" placeholder="여기에 내용을 입력하세요 (최대 200자)"></textarea>
       </fieldset>
 
-      <input type="submit" value="동의하고 회원가입">
+      <input type="submit" id="submitBtn" value="동의하고 회원가입">
       <input type="reset" value="다시 작성">
 
     </form>
   </div>
+  <script src="../script/signupValidation.js"></script>
 </body>
 </html>
